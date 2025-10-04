@@ -24,9 +24,11 @@ let obj4 = {
   lastName: "Kishore",
 };
 
-function printFullName() {
-  console.log(this.firstName + " " + this.lastName + " " + "type 2");
+function printFullName(type) {
+  console.log(this.firstName + " " + this.lastName + " " + type);
 }
 
-printFullName.call(obj1);
-printFullName.call(obj2);
+printFullName.call(obj3, "type 2");
+printFullName.call(obj4, "type 2");
+
+// we can pass arguments on call method
